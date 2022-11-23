@@ -7,6 +7,10 @@ const TabWrapper = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 0.5fr 1fr;
   justify-items: center;
+
+  p {
+    margin-top: 0.3em;
+  }
 `;
 const Tab = ({ svg, altTag, title }) => {
   return (
