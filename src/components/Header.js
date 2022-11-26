@@ -23,7 +23,7 @@ const HeaderWrapper = styled.div`
 const Header = ({ title, prevPage }) => {
   return (
     <HeaderWrapper>
-        <img src={logoSvg}></img>
+        <img src={logoSvg} alt="ChoreoStudio Logo"></img>
         <h1>{title}</h1>
     </HeaderWrapper>
   );
