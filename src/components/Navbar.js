@@ -5,7 +5,6 @@ import projectsSvg from "../assets/svgs/projects.svg";
 import inspirationSvg from "../assets/svgs/inspiration.svg";
 import allFilesSvg from "../assets/svgs/files.svg";
 import settingsSvg from "../assets/svgs/settings.svg";
-import { BrowserRouter } from "react-router-dom";
 
 const NavbarWrapper = styled.div`
   display: grid;
@@ -24,19 +23,12 @@ const NavbarWrapper = styled.div`
 
 const Navbar = () => {
   return (
-    <BrowserRouter>
-      {/* BrowserRouter is compulsory for Link tags */}
-      <NavbarWrapper>
-        <Tab svg={projectsSvg} altTag="projects icon" title="projects" />
-        <Tab
-          svg={inspirationSvg}
-          altTag="inspiration icon"
-          title="inspiration"
-        />
-        <Tab svg={allFilesSvg} altTag="all files icon" title="all files" />
-        <Tab svg={settingsSvg} altTag="settings icon" title="settings" />
-      </NavbarWrapper>
-    </BrowserRouter>
+    <NavbarWrapper>
+      <Tab svg={projectsSvg} altTag="projects icon" title="projects" />
+      <Tab svg={inspirationSvg} altTag="inspiration icon" title="inspiration" />
+      <Tab svg={allFilesSvg} altTag="all files icon" title="all files" />
+      <Tab svg={settingsSvg} altTag="settings icon" title="settings" />
+    </NavbarWrapper>
   );
 };
 
