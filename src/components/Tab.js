@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const TabWrapper = styled.div`
   text-transform: capitalize;
@@ -12,12 +13,20 @@ const TabWrapper = styled.div`
     margin-top: 0.3em;
   }
 `;
+
+const linkStyle = {
+  textDecoration: "none",
+  color: "black",
+};
+
 const Tab = ({ svg, altTag, title }) => {
   return (
-    <TabWrapper>
-      <img src={svg} alt={altTag} />
-      <p>{title}</p>
-    </TabWrapper>
+    <Link to={`/${title}`} style={linkStyle}>
+      <TabWrapper>
+        <img src={svg} alt={altTag} />
+        <p>{title}</p>
+      </TabWrapper>
+    </Link>
   );
 };
 
