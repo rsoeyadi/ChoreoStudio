@@ -1,4 +1,4 @@
-[choreostudio.netlify.app] (https://choreostudio.netlify.app)
+[choreostudio.netlify.app](https://choreostudio.netlify.app)
 
 # Getting Started with Create React App
 
