@@ -7,13 +7,14 @@ import allFilesSvg from "../assets/svgs/files.svg";
 import settingsSvg from "../assets/svgs/settings.svg";
 
 const NavbarWrapper = styled.div`
+  max-width: 768px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 100%;
   height: 60px;
   align-items: center;
   background-color: #d9d9d9;
-  
+
   position: fixed;
   bottom: 0;
   left: 0;

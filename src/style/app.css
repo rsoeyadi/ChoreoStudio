@@ -7,3 +7,7 @@
     box-sizing: border-box;
 }
 
+.App {
+    max-width: 768px;
+}
+
