@@ -5,7 +5,7 @@ import "../../style/app.css";
 const MarginWrapper = styled.div`
   width: 100%;
   height: 100%;
-  margin-top: 120px;
+  margin-top: 100px;
 `;
 
 function Wrapper({ body }) {

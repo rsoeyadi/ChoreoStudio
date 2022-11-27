@@ -6,7 +6,7 @@ import Wrapper from "../components/layout/Wrapper";
 function Home() {
   return (
     <>
-      <HeaderAndFooter pageTitle="Home" />
+      <HeaderAndFooter pageTitle="my projects" activeTab="projects"/>
       {/* place content in the body prop */}
       <Wrapper
         body={

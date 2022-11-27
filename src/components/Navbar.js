@@ -11,9 +11,9 @@ const NavbarWrapper = styled.div`
   grid-template-columns: repeat(4, 1fr);
   width: 100%;
   height: 60px;
+  align-items: center;
   background-color: #d9d9d9;
-  padding-top: 10px;
-
+  
   position: fixed;
   bottom: 0;
   left: 0;
@@ -21,13 +21,33 @@ const NavbarWrapper = styled.div`
   z-index: 100;
 `;
 
-const Navbar = () => {
+const Navbar = ({ activeTab }) => {
   return (
     <NavbarWrapper>
-      <Tab svg={projectsSvg} altTag="projects icon" title="projects" />
-      <Tab svg={inspirationSvg} altTag="inspiration icon" title="inspiration" />
-      <Tab svg={allFilesSvg} altTag="all files icon" title="all files" />
-      <Tab svg={settingsSvg} altTag="settings icon" title="settings" />
+      <Tab
+        svg={projectsSvg}
+        altTag="projects icon"
+        title="projects"
+        isActiveTab={activeTab === "projects"}
+      />
+      <Tab
+        svg={inspirationSvg}
+        altTag="inspiration icon"
+        title="inspiration"
+        isActiveTab={activeTab === "inspiration"}
+      />
+      <Tab
+        svg={allFilesSvg}
+        altTag="all files icon"
+        title="all files"
+        isActiveTab={activeTab === "all files"}
+      />
+      <Tab
+        svg={settingsSvg}
+        altTag="settings icon"
+        title="settings"
+        isActiveTab={activeTab === "settings"}
+      />
     </NavbarWrapper>
   );
 };
