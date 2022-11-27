@@ -2,38 +2,38 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const TabWrapper = styled.div`
-  text-transform: capitalize;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 1fr;
-  justify-items: center;
-  align-items: center;
-  height: 60%;
-
-  p {
-    margin-top: 0.2em;
-  }
+const ActiveTabOverlay = styled.div`
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: white;
+  border-radius: 1em;
+  max-width: 100px;
+  max-height: 50px;
+  z-index: -1;
+  background-color: white;
 `;
 
-const linkStyle = {
+const tabStyle = {
   textDecoration: "none",
   color: "black",
+  textTransform: "capitalize",
+  display: "grid",
+  justifyItems: "center",
+  alignItems: "center",  
 };
+
+
 
 const Tab = ({ svg, altTag, title, isActiveTab }) => {
   return (
-    <Link to={`/${title}`} style={linkStyle}>
-      <TabWrapper
-        style={{
-          backgroundColor: isActiveTab ? "white" : "#d9d9d9",
-          borderRadius: isActiveTab ? "15px" : "0px",
-        }}
-      >
+    <>
+      <Link to={`/${title}`} style={tabStyle}>
+        {isActiveTab && <ActiveTabOverlay />}
         <img src={svg} alt={altTag} />
         <p>{title}</p>
-      </TabWrapper>
-    </Link>
+      </Link>
+    </>
   );
 };
 
