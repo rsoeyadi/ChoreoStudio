@@ -15,6 +15,9 @@ const HeaderWrapper = styled.div`
   text-align: center;
   padding-top: 20px;
 
+  img {
+    margin: 0 auto;
+  }
   h1 {
     font-size: 1.2em;
     text-transform: uppercase;
