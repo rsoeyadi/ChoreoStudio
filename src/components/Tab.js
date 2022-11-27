@@ -8,7 +8,6 @@ const ActiveTabOverlay = styled.div`
   height: 100%;
   background-color: white;
   border-radius: 1em;
-  max-width: 100px;
   max-height: 50px;
   z-index: -1;
   background-color: white;
