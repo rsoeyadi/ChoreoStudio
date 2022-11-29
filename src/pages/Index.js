@@ -4,6 +4,7 @@ import HeaderAndFooter from "../components/layout/HeaderAndFooter";
 import Wrapper from "../components/layout/Wrapper";
 import ProjectBox from "../components/ProjectBox";
 import styled from "styled-components";
+import NewProjectBox from "../components/NewProjectBox";
 
 const ProjectBoxGrid = styled.div`
   display: grid;
@@ -26,6 +27,7 @@ function Home() {
             <ProjectBox title="Project 1" />
             <ProjectBox title="Dance Class F22" />
             <ProjectBox title="Ballet II Solo" />
+            <NewProjectBox />
           </ProjectBoxGrid>
         }
       />
