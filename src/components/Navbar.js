@@ -14,7 +14,6 @@ const NavbarWrapper = styled.div`
   height: 60px;
   align-items: center;
   background-color: #d9d9d9;
-
   position: fixed;
   bottom: 0;
   left: 0;

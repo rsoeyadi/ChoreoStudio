@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import EditIcon from "./EditIcon";
 import addIconSvg from "../assets/svgs/addicon.svg";
 
 const Box = styled.div`
