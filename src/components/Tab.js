@@ -11,8 +11,6 @@ const ActiveTabOverlay = styled.div`
   max-height: 50px;
   z-index: -1;
   background-color: white;
-
-
 `;
 
 const tabStyle = {
