@@ -4,13 +4,15 @@ import { Link } from "react-router-dom";
 
 const ActiveTabOverlay = styled.div`
   position: absolute;
-  width: 25%;
+  width: 33.3%;
   height: 100%;
   background-color: white;
   border-radius: 1em;
   max-height: 50px;
   z-index: -1;
   background-color: white;
+
+
 `;
 
 const tabStyle = {
@@ -19,10 +21,8 @@ const tabStyle = {
   textTransform: "capitalize",
   display: "grid",
   justifyItems: "center",
-  alignItems: "center",  
+  alignItems: "center",
 };
-
-
 
 const Tab = ({ svg, altTag, title, isActiveTab }) => {
   return (
