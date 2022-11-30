@@ -17,6 +17,29 @@ const ProjectBoxGrid = styled.div`
 `;
 
 function Home() {
+  const [projects, setProjects] = React.useState([
+    {
+      title: "Project 1",
+    },
+    {
+      title: "Dance Class F22",
+    },
+    {
+      title: "Ballet II Solo",
+    },
+  ]);
+
+  const addProject = (title) => {
+    const newProjects = [...projects, { title }];
+    setProjects(newProjects);
+  };
+
+  const deleteProject = (title) => {
+    /* this is a filter method that returns a new array with all the elements that pass the test implemented by the provided function. */
+    const newProjects = projects.filter((project) => project.title !== title);
+    setProjects(newProjects);
+  };
+
   return (
     <>
       <HeaderAndFooter pageTitle="my projects" activeTab="projects" />
@@ -24,9 +47,9 @@ function Home() {
       <Wrapper
         body={
           <ProjectBoxGrid>
-            <ProjectBox title="Project 1" />
-            <ProjectBox title="Dance Class F22" />
-            <ProjectBox title="Ballet II Solo" />
+            {projects.map((project) => (
+              <ProjectBox title={project.title} deleteProject={deleteProject} />
+            ))}
             <NewProjectBox />
           </ProjectBoxGrid>
         }

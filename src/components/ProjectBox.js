@@ -14,47 +14,74 @@ const Box = styled.div`
   background-color: white;
   border: 1px solid #868686;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
 `;
 
-const ProjectBox = ({ title }) => {
+const ProjectBox = ({ title, deleteProject }) => {
   return (
-    <Link
-      to={`/${title}`}
-      style={{
-        textDecoration: "none",
-        textTransform: "uppercase",
-        color: "#868686",
-      }}
-    >
+    <div>
       <Box>
+        {/*
+          The two links to /${title} are so users can click anywhere on the box except the edit/delete icons to go to the project page.
+          X X X X X O
+          X X X X X X
+          X X X X X X
+          X X X X X X
+          X X X X X X
+          X X X X X O
+      */}
+        <Link
+          to={`/${title}`}
+          style={{
+            gridColumn: "1/6",
+            gridRow: "1/7",
+          }}
+        ></Link>
+        <Link
+          to={`/${title}`}
+          style={{
+            gridColumnStart: "6",
+            gridRow: "2/6",
+          }}
+        ></Link>
         <Link
           to="/edit"
           style={{
-            gridColumnStart: "7",
+            gridColumnStart: "6",
           }}
         >
           <img src={editIcon} alt="edit icon" />
         </Link>
-        <Link
-          to="/delete"
+
+        <div
           style={{
-            gridColumnStart: "7",
-            gridRowStart: "7",
+            gridColumnStart: "6",
+            gridRowStart: "6",
           }}
         >
-          <img src={deleteIcon} alt="edit icon" />
-        </Link>
+          <img
+            src={deleteIcon}
+            alt="delete icon"
+            onClick={() => deleteProject(title)}
+            style={{
+              cursor: "pointer",
+            }}
+          />
+        </div>
       </Box>
-      <p
+      <Link
+        to={`/${title}`}
         style={{
+          textDecoration: "none",
+          textTransform: "uppercase",
+          color: "#868686",
           marginTop: "0.5em",
         }}
       >
         {title}
-      </p>
-    </Link>
+      </Link>
+    </div>
   );
 };
 
