@@ -9,7 +9,8 @@ import settingsSvg from "../assets/svgs/settings.svg";
 const NavbarWrapper = styled.div`
   max-width: 768px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
   width: 100%;
   height: 60px;
   align-items: center;
@@ -42,12 +43,12 @@ const Navbar = ({ activeTab }) => {
         title="all files"
         isActiveTab={activeTab === "all files"}
       />
-      <Tab
+      {/* <Tab
         svg={settingsSvg}
         altTag="settings icon"
         title="settings"
         isActiveTab={activeTab === "settings"}
-      />
+      /> */}
     </NavbarWrapper>
   );
 };
