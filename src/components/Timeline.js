@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
+import addMusicSvg from "../assets/svgs/add-music.svg";
 const Timeline = ({ length }) => {
   length = length + "px";
   return (
@@ -12,7 +12,18 @@ const Timeline = ({ length }) => {
         height: `${length}`,
         margin: "0 auto",
       }}
-    ></div>
+    >
+      <Link to="/add music">
+        <img
+          src={addMusicSvg}
+          alt="Add music button"
+          style={{
+            margin: "0 auto",
+            paddingTop: "10px",
+          }}
+        />
+      </Link>
+    </div>
   );
 };
 
