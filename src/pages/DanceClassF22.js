@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import Wrapper from "../components/layout/Wrapper";
 import HeaderAndFooter from "../components/layout/HeaderAndFooter";
+import Timeline from "../components/Timeline";
 
 const DanceClassF22 = () => {
   const location = useLocation();
@@ -13,7 +14,7 @@ const DanceClassF22 = () => {
     <>
       <HeaderAndFooter pageTitle={title} activeTab="projects" />
       {/* place content in the body prop */}
-      <Wrapper body={<div>{lengthInSeconds}</div>} />
+      <Wrapper body={<Timeline length={lengthInSeconds} />} />
     </>
   );
 };

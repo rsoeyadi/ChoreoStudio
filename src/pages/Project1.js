@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import IconAndTitleVertical from "../components/IconAndTitleVertical";
 import Wrapper from "../components/layout/Wrapper";
 import HeaderAndFooter from "../components/layout/HeaderAndFooter";
-
+import Timeline from "../components/Timeline";
 const Project1 = () => {
   const location = useLocation();
   const {title} = location.state.title;
@@ -16,9 +16,9 @@ const Project1 = () => {
       {/* place content in the body prop */}
       <Wrapper
         body={
-          <div>
-            {lengthInSeconds}
-          </div>
+          
+            <Timeline length={lengthInSeconds}/>
+          
         }
       />
     </>

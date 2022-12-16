@@ -18,17 +18,18 @@ const ProjectBoxGrid = styled.div`
 
 function Home() {
   const [projects, setProjects] = React.useState([
+    /* lengthInSeconds will determine how long each timeline is */
     {
       title: "Project 1",
-      lengthInSeconds: "320",
+      lengthInSeconds: 400 * 3,
     },
     {
       title: "Dance Class F22",
-      lengthInSeconds: "180",
+      lengthInSeconds: 180 * 3,
     },
     {
       title: "Ballet I Solo",
-      lengthInSeconds: "240",
+      lengthInSeconds: 60 * 3,
     },
   ]);
 
