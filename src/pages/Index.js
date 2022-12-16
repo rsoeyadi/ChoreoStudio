@@ -25,7 +25,7 @@ function Home() {
       title: "Dance Class F22",
     },
     {
-      title: "Ballet II Solo",
+      title: "Ballet I Solo",
     },
   ]);
 
