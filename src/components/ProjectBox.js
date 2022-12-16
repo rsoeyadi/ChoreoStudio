@@ -18,7 +18,7 @@ const Box = styled.div`
   grid-template-rows: repeat(6, 1fr);
 `;
 
-const ProjectBox = ({ title, deleteProject }) => {
+const ProjectBox = ({ title, lengthInSeconds, deleteProject }) => {
   return (
     <div>
       <Box>
@@ -37,6 +37,10 @@ const ProjectBox = ({ title, deleteProject }) => {
             gridColumn: "1/6",
             gridRow: "1/7",
           }}
+          state={{
+            title: { title },
+            lengthInSeconds: { lengthInSeconds },
+          }}
         ></Link>
         <Link
           to={`/${title}`}
@@ -44,11 +48,19 @@ const ProjectBox = ({ title, deleteProject }) => {
             gridColumnStart: "6",
             gridRow: "2/6",
           }}
+          state={{
+            title: { title },
+            lengthInSeconds: { lengthInSeconds },
+          }}
         ></Link>
         <Link
           to="/edit"
           style={{
             gridColumnStart: "6",
+          }}
+          state={{
+            title: { title },
+            lengthInSeconds: { lengthInSeconds },
           }}
         >
           <img src={editIcon} alt="edit icon" />
@@ -77,6 +89,10 @@ const ProjectBox = ({ title, deleteProject }) => {
           textTransform: "uppercase",
           color: "#868686",
           marginTop: "0.5em",
+        }}
+        state={{
+          title: { title },
+          lengthInSeconds: { lengthInSeconds },
         }}
       >
         {title}

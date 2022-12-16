@@ -20,12 +20,15 @@ function Home() {
   const [projects, setProjects] = React.useState([
     {
       title: "Project 1",
+      lengthInSeconds: "320",
     },
     {
       title: "Dance Class F22",
+      lengthInSeconds: "180",
     },
     {
       title: "Ballet I Solo",
+      lengthInSeconds: "240",
     },
   ]);
 
@@ -40,6 +43,7 @@ function Home() {
     setProjects(newProjects);
   };
 
+  
   return (
     <>
       <HeaderAndFooter pageTitle="my projects" activeTab="projects" />
@@ -48,7 +52,11 @@ function Home() {
         body={
           <ProjectBoxGrid>
             {projects.map((project) => (
-              <ProjectBox title={project.title} deleteProject={deleteProject} />
+              <ProjectBox
+                title={project.title}
+                lengthInSeconds={project.lengthInSeconds}
+                deleteProject={deleteProject}
+              />
             ))}
             <NewProjectBox />
           </ProjectBoxGrid>
