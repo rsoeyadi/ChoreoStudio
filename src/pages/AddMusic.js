@@ -14,17 +14,19 @@ const AddMusicGrid = styled.div`
 const AddMusic = ({ pageTitle }) => {
   const location = useLocation();
   const { from } = location.state;
-  
+
   return (
     <>
       <HeaderAndFooter pageTitle={from.pageTitle} activeTab="projects" />
       <Wrapper
         body={
           <AddMusicGrid>
-            <AddSongRow />
-            <AddSongRow />
-            <AddSongRow />
-            <AddSongRow />
+            <AddSongRow SongName="Song 1" ArtistName="Artist 1" />
+
+            <AddSongRow SongName="Song 1" ArtistName="Artist 1" />
+            <AddSongRow SongName="Song 2" ArtistName="Artist 2" />
+            <AddSongRow SongName="Song 3" ArtistName="Artist 3" />
+            <AddSongRow SongName="Song 4" ArtistName="Artist 4" />
           </AddMusicGrid>
         }
       ></Wrapper>
