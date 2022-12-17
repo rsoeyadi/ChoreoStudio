@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import addMusicSvg from "../assets/svgs/add-music.svg";
-const Timeline = ({ length }) => {
+const Timeline = ({ length, pageTitle }) => {
   length = length + "px";
   return (
     <div
@@ -14,7 +14,12 @@ const Timeline = ({ length }) => {
         borderRadius: "10px",
       }}
     >
-      <Link to="/add music">
+      <Link
+        to="/add music"
+        state={{
+          from: { pageTitle },
+        }}
+      >
         <img
           src={addMusicSvg}
           alt="Add music button"

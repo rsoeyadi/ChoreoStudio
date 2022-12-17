@@ -14,7 +14,9 @@ const Ballet1Solo = () => {
     <>
       <HeaderAndFooter pageTitle={title} activeTab="projects" />
       {/* place content in the body prop */}
-      <Wrapper body={<Timeline length={lengthInSeconds * 3} />} />
+      <Wrapper
+        body={<Timeline length={lengthInSeconds * 3} pageTitle={title} />}
+      />
     </>
   );
 };

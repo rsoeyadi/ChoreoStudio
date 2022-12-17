@@ -14,7 +14,7 @@ const DanceClassF22 = () => {
     <>
       <HeaderAndFooter pageTitle={title} activeTab="projects" />
       {/* place content in the body prop */}
-      <Wrapper body={<Timeline length={lengthInSeconds} />} />
+      <Wrapper body={<Timeline length={lengthInSeconds} pageTitle={title} />} />
     </>
   );
 };
