@@ -7,7 +7,7 @@ import checkSvg from "../assets/svgs/check.svg";
 
 const style = {
   display: "grid",
-  gridTemplateColumns: "repeat(6, 1fr)",
+  gridTemplateColumns: "repeat(8, 1fr)",
   gridTemplateRows: "62px",
   border: "solid 0.5px #D0D0D0",
   borderRadius: "10px",
@@ -37,7 +37,7 @@ const AddMusicHeaderRow = ({ SongName, ArtistName }) => {
       </GridElement>
       <GridElement
         style={{
-          gridColumn: "2 / span 4",
+          gridColumn: "2 / span 6",
           fontStyle: "italic",
         }}
       >
