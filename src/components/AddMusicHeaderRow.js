@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import chevronLeftSvg from "../assets/svgs/chevron-left.svg";
 import checkSvg from "../assets/svgs/check.svg";
 
 const style = {
@@ -32,9 +31,6 @@ const circleStyle = {
 const AddMusicHeaderRow = ({ SongName, ArtistName }) => {
   return (
     <div style={style}>
-      <GridElement>
-        <img src={chevronLeftSvg} alt="Back button Icon" />
-      </GridElement>
       <GridElement
         style={{
           gridColumn: "2 / span 6",
