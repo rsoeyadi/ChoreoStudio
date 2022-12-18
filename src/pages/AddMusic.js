@@ -6,6 +6,7 @@ import HeaderAndFooter from "../components/layout/HeaderAndFooter";
 import Timeline from "../components/Timeline";
 import AddSongRow from "../components/AddSongRow";
 import Wrapper from "../components/layout/Wrapper";
+import AddMusicHeaderRow from "../components/AddMusicHeaderRow";
 
 const AddMusicGrid = styled.div`
   display: grid;
@@ -21,7 +22,7 @@ const AddMusic = ({ pageTitle }) => {
       <Wrapper
         body={
           <AddMusicGrid>
-            <AddSongRow SongName="Song 1" ArtistName="Artist 1" />
+            <AddMusicHeaderRow />
 
             <AddSongRow SongName="Song 1" ArtistName="Artist 1" />
             <AddSongRow SongName="Song 2" ArtistName="Artist 2" />
