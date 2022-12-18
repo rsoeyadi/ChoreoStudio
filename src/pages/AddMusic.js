@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 import HeaderAndFooter from "../components/layout/HeaderAndFooter";
 import Timeline from "../components/Timeline";
 import AddSongRow from "../components/AddSongRow";
