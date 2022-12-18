@@ -18,7 +18,11 @@ const AddMusic = ({ pageTitle }) => {
 
   return (
     <>
-      <HeaderAndFooter pageTitle={from.pageTitle} activeTab="projects" />
+      <HeaderAndFooter
+        pageTitle={from.pageTitle}
+        activeTab="projects"
+        prevPage={from.pageTitle}
+      />
       <Wrapper
         body={
           <AddMusicGrid>

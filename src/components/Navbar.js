@@ -4,7 +4,6 @@ import Tab from "./Tab";
 import projectsSvg from "../assets/svgs/projects.svg";
 import inspirationSvg from "../assets/svgs/inspiration.svg";
 import allFilesSvg from "../assets/svgs/files.svg";
-// import settingsSvg from "../assets/svgs/settings.svg";
 
 const NavbarWrapper = styled.div`
   max-width: 768px;

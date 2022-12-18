@@ -3,10 +3,10 @@ import "../../style/app.css";
 import Navbar from "../Navbar";
 import Header from "../Header";
 
-function HeaderAndFooter({ pageTitle, activeTab }) {
+function HeaderAndFooter({ pageTitle, activeTab, prevPage }) {
   return (
     <>
-      <Header title={pageTitle} />
+      <Header title={pageTitle} prevPage={prevPage} />
       <Navbar activeTab={activeTab} />
     </>
   );

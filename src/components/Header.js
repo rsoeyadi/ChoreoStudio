@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import logoSvg from "../assets/svgs/logo.svg";
 import settingsIcon from "../assets/svgs/settingsicon.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import chevronLeftSvg from "../assets/svgs/chevron-left.svg";
+
 const HeaderWrapper = styled.div`
   max-width: 768px;
   width: 100%;
@@ -19,7 +21,7 @@ const HeaderWrapper = styled.div`
   img {
     margin: 0 auto;
   }
-  
+
   h1 {
     font-size: 1.2em;
     text-transform: uppercase;
@@ -28,6 +30,8 @@ const HeaderWrapper = styled.div`
 `;
 
 const Header = ({ title, prevPage }) => {
+  const navigate = useNavigate();
+
   return (
     <HeaderWrapper>
       <img src={logoSvg} alt="ChoreoStudio Logo"></img>
@@ -43,6 +47,19 @@ const Header = ({ title, prevPage }) => {
           }}
         />
       </Link>
+      {prevPage && (
+          <img
+            src={chevronLeftSvg}
+            alt="Back button"
+            style={{
+              display: "inline-block",
+              position: "absolute",
+              left: "1em",
+              bottom: "1em",
+            }}
+            onClick={() => navigate(-1)}
+          />
+      )}
     </HeaderWrapper>
   );
 };
