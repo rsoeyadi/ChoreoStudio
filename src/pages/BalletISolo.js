@@ -12,7 +12,11 @@ const Ballet1Solo = () => {
   const { lengthInSeconds } = location.state.lengthInSeconds;
   return (
     <>
-      <HeaderAndFooter pageTitle={title} activeTab="projects" />
+      <HeaderAndFooter
+        pageTitle={title}
+        activeTab="projects"
+        prevPage={title}
+      />
       {/* place content in the body prop */}
       <Wrapper
         body={<Timeline length={lengthInSeconds * 3} pageTitle={title} />}
