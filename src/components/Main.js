@@ -6,6 +6,7 @@ import Project1 from "../pages/Project1"
 import BalletISolo from "../pages/BalletISolo"
 import DanceClassF22 from "../pages/DanceClassF22";
 import AddMusic from "../pages/AddMusic";
+import Moodboards from "../pages/Moodboards";
 
 const Main = () => {
   return (
@@ -18,6 +19,7 @@ const Main = () => {
       <Route path="Dance Class F22" element={<DanceClassF22 />}></Route>
       <Route path="Ballet I Solo" element={<BalletISolo />}></Route>
       <Route path="add music" element={<AddMusic />}></Route>
+      <Route path="moodboards" element={<Moodboards />}></Route>
     </Routes>
   );
 };

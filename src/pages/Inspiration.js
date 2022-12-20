@@ -14,18 +14,20 @@ const Inspiration = () => {
       {/* place content in the body prop */}
       <Wrapper
         body={
-          <div style={{
-            textAlign: "center",
-            display: "grid",
-            gridRowGap: "3em",
-            paddingTop: "3em"
-          }}>
-            <IconAndTitleVertical
-              svg={moodboardSvg}
-              altTag="Moodboard Icon"
-              title="My moodboards"
-              link=""
-            />
+          <div
+            style={{
+              textAlign: "center",
+              display: "grid",
+              gridRowGap: "3em",
+              paddingTop: "3em",
+            }}
+          >
+              <IconAndTitleVertical
+                svg={moodboardSvg}
+                altTag="Moodboard Icon"
+                title="My moodboards"
+                link="/moodboards"
+              />
             <IconAndTitleVertical
               svg={exploreSvg}
               altTag="Explore ideas Icon"

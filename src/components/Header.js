@@ -56,6 +56,7 @@ const Header = ({ title, prevPage }) => {
               position: "absolute",
               left: "1em",
               bottom: "1em",
+              cursor: "pointer",
             }}
             onClick={() => navigate(-1)}
           />
