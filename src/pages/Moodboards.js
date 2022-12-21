@@ -6,6 +6,7 @@ import IconAndTitleVertical from "../components/IconAndTitleVertical";
 import Wrapper from "../components/layout/Wrapper";
 import HeaderAndFooter from "../components/layout/HeaderAndFooter";
 import HorizontalMoodboardsRow from "../components/HorizontalMoodboardsRow";
+import NewCollectionButton from "../components/NewCollectionButton";
 
 const HorizontalMoodboardsRowTitle = styled.h1`
   font-size: 15px;
@@ -13,8 +14,9 @@ const HorizontalMoodboardsRowTitle = styled.h1`
 `;
 
 const Row = styled.div`
-  margin-bottom: 1em;
+  margin: 1em 0;
 `;
+
 const Moodboards = () => {
   return (
     <div>
@@ -27,6 +29,7 @@ const Moodboards = () => {
       <Wrapper
         body={
           <div>
+            <NewCollectionButton />
             <Row>
               <HorizontalMoodboardsRowTitle>Moods</HorizontalMoodboardsRowTitle>
               <HorizontalMoodboardsRow
